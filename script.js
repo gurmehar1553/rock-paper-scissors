@@ -154,13 +154,6 @@ function move(round_num) {
         return;
     }
 }
-
-function saveScore(uScore, cScore,rounds) {
-    localStorage.setItem("LOCAL_SAVE_USCORE", uScore)
-    localStorage.setItem("LOCAL_SAVE_CSCORE", cScore)
-    localStorage.setItem("LOCAL_SAVE_ROUND", rounds)
-}
-
 function selectRound() {
     var round_num = document.querySelector("#round").value;
     if (round_num <= 0) {
@@ -172,5 +165,12 @@ function selectRound() {
         selectedRounds=true;
         move(round_num);
     }
+}
+
+
+function saveScore(uScore, cScore,rounds) {
+    localStorage.setItem("LOCAL_SAVE_USCORE", uScore)
+    localStorage.setItem("LOCAL_SAVE_CSCORE", cScore)
+    localStorage.setItem("LOCAL_SAVE_ROUND", rounds)
 }
 
